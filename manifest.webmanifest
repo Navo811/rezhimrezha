@@ -1,0 +1,33 @@
+{
+  "name": "РежимРеза — режимы резания",
+  "short_name": "РежимРеза",
+  "description": "Калькулятор режимов резания: токарка и фрезеровка, вылет, резонанс, 3D-инструмент.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "lang": "ru",
+  "background_color": "#efeef4",
+  "theme_color": "#3390EC",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

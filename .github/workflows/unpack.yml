@@ -1,0 +1,23 @@
+name: unpack-binaries
+on:
+  push:
+    branches: [gh-pages]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unpack base64 binaries (icons, insert thumbnails)
+        run: |
+          if [ -f binaries.tgz.b64 ]; then
+            base64 -d binaries.tgz.b64 | tar xzf -
+            git rm -q binaries.tgz.b64
+            git add -A
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Unpack binary assets"
+            git push
+          fi
